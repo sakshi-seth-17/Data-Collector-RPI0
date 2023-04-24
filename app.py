@@ -112,7 +112,7 @@ def storeKPI(docName,motion,encoded_string):
     data["image"] = encoded_string
     data["location"]= location
     
-    storeOnWebserver(data,'http://aspendb.uga.edu/firebase/getdata')
+    storeOnWebserver(data,'http://aspendb.uga.edu/database/storedata')
 
     storeOnWebserver(data,'http://aspendb.uga.edu/rpi0/storedata')
     print("KPI stored")
