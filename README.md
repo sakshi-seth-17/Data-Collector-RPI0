@@ -68,7 +68,7 @@ WantedBy=multi-user.target
 `sudo systemctl status datacollector.service` \
 
 ---
-Folder Structure
+### Folder Structure
 	- venv/
 	- app.py
 	- config.json (Not on github, need to ask for this file from lab members)
