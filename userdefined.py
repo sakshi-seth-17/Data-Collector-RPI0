@@ -19,13 +19,13 @@ def writeJson(path, newdata):
     except :
         return 0
         
-#config = readJson("config.json")
-#print(config)  
 
 def saveSqlite(query):
-    #try:
-    conn = sqlite3.connect("/home/wendy-king/DataCollector/data.db")
-    conn.execute(query)
-    conn.commit()
-    conn.close()
-    return 1
+    try:
+        conn = sqlite3.connect("/home/sonya-cummings/DataCollector/data.db")
+        conn.execute(query)
+        conn.commit()
+        conn.close()
+        return 1
+    except:
+        return 0

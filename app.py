@@ -60,8 +60,7 @@ def storeOnWebserver(data,url):
     # Send the JSON string to the API endpoint
     response = requests.post(url, json=data_str)
 
-    # Print the response
-    print(response)
+    # return the response
     return response.text
 
 
@@ -102,7 +101,7 @@ def storeImage():
     
     
 '''
-    Store Humidity, Temperature, IP Address and Motion data
+    Store Humidity, Temperature, IP Address data
 '''
     
 def storeSensorReadings(docName,motion,encoded_string):
@@ -128,7 +127,6 @@ def storeSensorReadings(docName,motion,encoded_string):
     #store all the data into a dictionary 
     data["Motion"] = motion   #Currently set to None
     data["IPAddress"] = raspberryIP()   #IP address of the RPI
-    #data["Thermal"] = str(getThermal()) #Thermal matrix
     data["ImgRef"] = docName #ImgRef
     data["brightness"] = configData["current_brightness"]   #store brightness
     data["rpi"] = rpidescription
