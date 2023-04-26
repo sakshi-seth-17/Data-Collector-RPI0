@@ -41,24 +41,24 @@ To check if application is working fine run – `python3 app.py` \
 ### Create service file to make the app run indefinitely
 `sudo nano /lib/systemd/system/datacollector.service` \
 Paste below lines inside the file by making necessary changes \
-	[Unit] \
-	Description=rpi0 \
+	[Unit] 
+	Description=rpi0 
 	After=multi-user.target 
 
 
-	[Service] \
-	WorkingDirectory=/home/sonya-cummings \
-	User=sonya-cummings \
-	Type=idle \
-	ExecStart=/home/sonya-cummings/DataCollector/venv/bin/python3 /home/sonya-cummings/DataCollector/app.py \
-	Restart=on-failure \
-	KillMode=process \
-	LimitMEMLOCK=infinity \
-	LimitNOFILE=65535 \
+	[Service] 
+	WorkingDirectory=/home/sonya-cummings 
+	User=sonya-cummings 
+	Type=idle 
+	ExecStart=/home/sonya-cummings/DataCollector/venv/bin/python3 /home/sonya-cummings/DataCollector/app.py 
+	Restart=on-failure 
+	KillMode=process 
+	LimitMEMLOCK=infinity 
+	LimitNOFILE=65535 
 	Type=simple 
 
 
-	[Install] \
+	[Install] 
 	WantedBy=multi-user.target 
 
 `sudo chmod 644 /lib/systemd/system/datacollector.service` \
