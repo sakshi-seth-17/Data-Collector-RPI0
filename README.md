@@ -19,7 +19,7 @@ This application is built using Python to store observations from the sensor lik
 - Create another entry of the RPI in the Firebase Database -> CollectionName(same as used in the above data)
 - Create another entry of the RPI in the Storage to store images
 - Create a database table in Data-Store.db on webserver for the respective RPI on webserver@128.192.158.63 path: /var/www/aspendb/probesearch/SensorsData
-- Firebase account can be accessed using https://console.firebase.google.com/u/1/project/rpi-dataset/firestore/data/~2FRPI-details
+- RPI details can be updated in Firebase using https://console.firebase.google.com/u/1/project/rpi-dataset/firestore/data/~2FRPI-details
 
 ---
 
