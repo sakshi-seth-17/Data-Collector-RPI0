@@ -41,6 +41,8 @@ To check if application is working fine run – `python3 app.py`
 ### Create service file to make the app run indefinitely
 `sudo nano /lib/systemd/system/datacollector.service` \
 Paste below lines inside the file by making necessary changes \
+
+
 	[Unit] 
 	Description=rpi0 
 	After=multi-user.target 
@@ -65,7 +67,7 @@ Paste below lines inside the file by making necessary changes \
 `sudo systemctl enable datacollector.service` \
 `sudo systemctl daemon-reload` \
 `sudo systemctl start datacollector.service` \
-`sudo systemctl status datacollector.service` \
+`sudo systemctl status datacollector.service` 
 
 ---
 ### Folder Structure
